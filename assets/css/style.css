@@ -1,32 +1,14 @@
-body {
-  margin: 0;
-  background: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-nav {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-}
-
-nav a {
-  color: white;
-  margin-right: 20px;
-  text-decoration: none;
-}
-
 .gallery {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  height: 100vh;
+  flex-wrap: wrap; /* this allows multiple rows */
+  gap: 10px; /* space between images */
+  justify-content: center;
+  padding: 20px;
 }
 
 .gallery img {
-  width: 100vw;
+  width: 300px;   /* or any fixed size you want */
+  height: auto;
   object-fit: cover;
-  scroll-snap-align: start;
+  border-radius: 10px;
 }
