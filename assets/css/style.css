@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+}
+
+.gallery img {
+  width: 100vw;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
