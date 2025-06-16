@@ -1,27 +1,87 @@
-
-body, html {
-  background-color: #111;
+/* Reset all browser default spacing and box models */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.gallery {
-  background-color: #111;
-}
-
-.gallery a {
-  background-color: transparent;
-  display: block;
-}
-
-.gallery img {
-  display: block;
+/* Global page style */
+html, body {
+  background-color: #111;        /* Dark background */
+  color: #fff;                   /* White text */
+  font-family: Arial, sans-serif;
   width: 100%;
-  background-color: transparent;
-  border-radius: 6px;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-/* Lightbox background fix */
+/* Navigation bar */
+nav {
+  background-color: #000;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Gallery layout */
+.gallery {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  background-color: transparent;
+}
+
+/* Each image inside the gallery */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* About section */
+.about {
+  padding: 40px 20px;
+  background-color: #181818;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Lightbox overlay (if using Lightbox2) */
 .lightboxOverlay {
   background-color: rgba(0, 0, 0, 0.95) !important;
 }
